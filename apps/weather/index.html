@@ -1,0 +1,57 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather</title>
+  <script type="module" src="script.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<div id="root">
+  <div class="min-h-screen p-4 sm:p-6 md:p-8" style="background: linear-gradient(rgb(30, 64, 175), rgb(59, 130, 246))">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex justify-between items-center mb-8">
+        <h1 class="text-2xl font-semibold text-white">Weather</h1><button class="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus w-6 h-6 text-white">
+        <path d="M5 12h14"></path>
+        <path d="M12 5v14"></path>
+      </svg></button>
+      </div>
+      <div class="grid gap-6 grid-cols-1">
+        <div class="w-full max-w-md rounded-3xl overflow-hidden backdrop-blur-lg bg-white/10 text-white shadow-lg mb-6" style="opacity: 0; transform: translateY(20px)">
+          <div class="relative p-6"><button class="absolute top-4 right-4 text-white/60 hover:text-white"> × </button>
+            <div class="flex justify-between items-start mb-8">
+              <div>
+                <h2 class="text-3xl font-semibold">London</h2>
+                <p class="text-white/60">GB</p>
+              </div>
+              <div class="text-right">
+                <div class="text-5xl font-light">13°</div>
+                <p class="text-white/60">Feels like 11°</p>
+              </div>
+            </div>
+            <div class="flex justify-between items-center">
+              <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cloud w-5 h-5 text-white/60">
+                <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
+              </svg><span class="capitalize">scattered clouds</span></div>
+            </div>
+            <div class="mt-6 grid grid-cols-2 gap-4">
+              <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-droplets w-5 h-5 text-white/60">
+                <path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"></path>
+                <path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"></path>
+              </svg><span>50% humidity</span></div>
+              <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wind w-5 h-5 text-white/60">
+                <path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"></path>
+                <path d="M9.6 4.6A2 2 0 1 1 11 8H2"></path>
+                <path d="M12.6 19.4A2 2 0 1 0 14 16H2"></path>
+              </svg><span>6 m/s</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

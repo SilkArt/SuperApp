@@ -1,0 +1,351 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <script type="module" src="script.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div id="root">
+      <div
+        class="min-h-screen bg-[#1C1C1E] flex items-center justify-center p-4"
+      >
+        <div
+          class="w-[900px] bg-[#1C1C1E] rounded-3xl p-6 shadow-2xl flex gap-6"
+        >
+          <div class="flex-1">
+            <div class="flex justify-between items-center mb-4">
+              <div class="flex items-center gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-calculator text-[#FF9F0A] w-8 h-8"
+                >
+                  <rect width="16" height="20" x="4" y="2" rx="2"></rect>
+                  <line x1="8" x2="16" y1="6" y2="6"></line>
+                  <line x1="16" x2="16" y1="14" y2="18"></line>
+                  <path d="M16 10h.01"></path>
+                  <path d="M12 10h.01"></path>
+                  <path d="M8 10h.01"></path>
+                  <path d="M12 14h.01"></path>
+                  <path d="M8 14h.01"></path>
+                  <path d="M12 18h.01"></path>
+                  <path d="M8 18h.01"></path></svg
+                ><span class="text-[#FF9F0A] text-sm font-medium"
+                  >Scientific</span
+                >
+              </div>
+              <div class="flex gap-4 items-center">
+                <button
+                  class="text-[#FF9F0A] hover:text-[#FFB340] transition-colors"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-history w-5 h-5"
+                  >
+                    <path
+                      d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"
+                    ></path>
+                    <path d="M3 3v5h5"></path>
+                    <path d="M12 7v5l4 2"></path>
+                  </svg></button
+                ><button
+                  class="text-[#FF9F0A] text-sm font-medium hover:text-[#FFB340] transition-colors"
+                >
+                  DEG
+                </button>
+              </div>
+            </div>
+            <div class="bg-[#1C1C1E] rounded-2xl p-4 mb-4">
+              <div class="text-right">
+                <div class="flex justify-between items-center mb-1">
+                  <span class="text-[#FF9F0A] text-sm">DEG</span>
+                  <div class="flex items-center gap-2">
+                    <span class="text-[#86868A] text-sm h-6"></span>
+                  </div>
+                </div>
+                <div
+                  class="text-white text-4xl font-light tracking-wider overflow-x-auto whitespace-nowrap"
+                >
+                  0
+                </div>
+              </div>
+            </div>
+            <div class="grid grid-cols-4 gap-3">
+              <button
+                class="h-16 rounded-2xl text-white text-xl font-medium transition-colors bg-[#505050] hover:bg-[#707070] text-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-rotate-ccw w-5 h-5 mx-auto"
+                >
+                  <path
+                    d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"
+                  ></path>
+                  <path d="M3 3v5h5"></path>
+                </svg></button
+              ><button
+                class="h-16 rounded-2xl text-white text-xl font-medium transition-colors bg-[#505050] hover:bg-[#707070] text-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-x w-5 h-5 mx-auto"
+                >
+                  <path d="M18 6 6 18"></path>
+                  <path d="m6 6 12 12"></path>
+                </svg></button
+              ><button
+                class="h-16 rounded-2xl text-white text-xl font-medium transition-colors bg-[#FF9F0A] hover:bg-[#FFB340] text-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-divide w-5 h-5 mx-auto"
+                >
+                  <circle cx="12" cy="6" r="1"></circle>
+                  <line x1="5" x2="19" y1="12" y2="12"></line>
+                  <circle cx="12" cy="18" r="1"></circle>
+                </svg></button
+              ><button
+                class="h-16 rounded-2xl text-white text-xl font-medium transition-colors bg-[#FF9F0A] hover:bg-[#FFB340] text-white"
+              >
+                ×</button
+              ><button
+                class="h-16 rounded-2xl text-white text-xl font-medium transition-colors bg-[#333333] hover:bg-[#505050] text-white"
+              >
+                7</button
+              ><button
+                class="h-16 rounded-2xl text-white text-xl font-medium transition-colors bg-[#333333] hover:bg-[#505050] text-white"
+              >
+                8</button
+              ><button
+                class="h-16 rounded-2xl text-white text-xl font-medium transition-colors bg-[#333333] hover:bg-[#505050] text-white"
+              >
+                9</button
+              ><button
+                class="h-16 rounded-2xl text-white text-xl font-medium transition-colors bg-[#333333] hover:bg-[#505050] text-white"
+              >
+                4</button
+              ><button
+                class="h-16 rounded-2xl text-white text-xl font-medium transition-colors bg-[#333333] hover:bg-[#505050] text-white"
+              >
+                5</button
+              ><button
+                class="h-16 rounded-2xl text-white text-xl font-medium transition-colors bg-[#333333] hover:bg-[#505050] text-white"
+              >
+                6</button
+              ><button
+                class="h-16 rounded-2xl text-white text-xl font-medium transition-colors bg-[#333333] hover:bg-[#505050] text-white"
+              >
+                1</button
+              ><button
+                class="h-16 rounded-2xl text-white text-xl font-medium transition-colors bg-[#333333] hover:bg-[#505050] text-white"
+              >
+                2</button
+              ><button
+                class="h-16 rounded-2xl text-white text-xl font-medium transition-colors bg-[#333333] hover:bg-[#505050] text-white"
+              >
+                3</button
+              ><button
+                class="h-16 rounded-2xl text-white text-xl font-medium transition-colors bg-[#FF9F0A] hover:bg-[#FFB340] text-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-minus w-5 h-5 mx-auto"
+                >
+                  <path d="M5 12h14"></path>
+                </svg></button
+              ><button
+                class="h-16 rounded-2xl text-white text-xl font-medium transition-colors bg-[#FF9F0A] hover:bg-[#FFB340] text-white"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-plus w-5 h-5 mx-auto"
+                >
+                  <path d="M5 12h14"></path>
+                  <path d="M12 5v14"></path>
+                </svg></button
+              ><button
+                class="h-16 rounded-2xl text-white text-xl font-medium transition-colors bg-[#FF9F0A] hover:bg-[#FFB340] text-white row-span-2"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-equal w-5 h-5 mx-auto"
+                >
+                  <line x1="5" x2="19" y1="9" y2="9"></line>
+                  <line x1="5" x2="19" y1="15" y2="15"></line>
+                </svg></button
+              ><button
+                class="h-16 rounded-2xl text-white text-xl font-medium transition-colors col-span-2 bg-[#333333] hover:bg-[#505050] text-white"
+              >
+                0</button
+              ><button
+                class="h-16 rounded-2xl text-white text-xl font-medium transition-colors bg-[#333333] hover:bg-[#505050] text-white"
+              >
+                .
+              </button>
+            </div>
+          </div>
+          <div class="flex-1">
+            <div class="grid grid-cols-5 gap-3 mb-3">
+              <button
+                class="h-16 rounded-2xl text-white text-xl font-medium transition-colors bg-[#505050] hover:bg-[#707070] text-white text-sm"
+              >
+                MC</button
+              ><button
+                class="h-16 rounded-2xl text-white text-xl font-medium transition-colors bg-[#505050] hover:bg-[#707070] text-white text-sm"
+              >
+                MR</button
+              ><button
+                class="h-16 rounded-2xl text-white text-xl font-medium transition-colors bg-[#505050] hover:bg-[#707070] text-white text-sm"
+              >
+                M+</button
+              ><button
+                class="h-16 rounded-2xl text-white text-xl font-medium transition-colors bg-[#505050] hover:bg-[#707070] text-white text-sm"
+              >
+                M-</button
+              ><button
+                class="h-16 rounded-2xl text-white text-xl font-medium transition-colors bg-[#505050] hover:bg-[#707070] text-white text-sm"
+              >
+                ANS
+              </button>
+            </div>
+            <div class="grid grid-cols-4 gap-3">
+              <button
+                class="h-16 rounded-2xl text-white text-xl font-medium transition-colors bg-[#505050] hover:bg-[#707070] text-white text-sm"
+              >
+                sin</button
+              ><button
+                class="h-16 rounded-2xl text-white text-xl font-medium transition-colors bg-[#505050] hover:bg-[#707070] text-white text-sm"
+              >
+                cos</button
+              ><button
+                class="h-16 rounded-2xl text-white text-xl font-medium transition-colors bg-[#505050] hover:bg-[#707070] text-white text-sm"
+              >
+                tan</button
+              ><button
+                class="h-16 rounded-2xl text-white text-xl font-medium transition-colors bg-[#505050] hover:bg-[#707070] text-white text-sm"
+              >
+                log</button
+              ><button
+                class="h-16 rounded-2xl text-white text-xl font-medium transition-colors bg-[#505050] hover:bg-[#707070] text-white text-sm"
+              >
+                sin⁻¹</button
+              ><button
+                class="h-16 rounded-2xl text-white text-xl font-medium transition-colors bg-[#505050] hover:bg-[#707070] text-white text-sm"
+              >
+                cos⁻¹</button
+              ><button
+                class="h-16 rounded-2xl text-white text-xl font-medium transition-colors bg-[#505050] hover:bg-[#707070] text-white text-sm"
+              >
+                tan⁻¹</button
+              ><button
+                class="h-16 rounded-2xl text-white text-xl font-medium transition-colors bg-[#505050] hover:bg-[#707070] text-white text-sm"
+              >
+                ln</button
+              ><button
+                class="h-16 rounded-2xl text-white text-xl font-medium transition-colors bg-[#505050] hover:bg-[#707070] text-white text-sm"
+              >
+                π</button
+              ><button
+                class="h-16 rounded-2xl text-white text-xl font-medium transition-colors bg-[#505050] hover:bg-[#707070] text-white text-sm"
+              >
+                e</button
+              ><button
+                class="h-16 rounded-2xl text-white text-xl font-medium transition-colors bg-[#505050] hover:bg-[#707070] text-white text-sm"
+              >
+                xʸ</button
+              ><button
+                class="h-16 rounded-2xl text-white text-xl font-medium transition-colors bg-[#505050] hover:bg-[#707070] text-white text-sm"
+              >
+                √</button
+              ><button
+                class="h-16 rounded-2xl text-white text-xl font-medium transition-colors bg-[#505050] hover:bg-[#707070] text-white text-sm"
+              >
+                mod</button
+              ><button
+                class="h-16 rounded-2xl text-white text-xl font-medium transition-colors bg-[#505050] hover:bg-[#707070] text-white text-sm"
+              >
+                exp</button
+              ><button
+                class="h-16 rounded-2xl text-white text-xl font-medium transition-colors bg-[#505050] hover:bg-[#707070] text-white text-sm"
+              >
+                1/x</button
+              ><button
+                class="h-16 rounded-2xl text-white text-xl font-medium transition-colors bg-[#505050] hover:bg-[#707070] text-white text-sm"
+              >
+                n!
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

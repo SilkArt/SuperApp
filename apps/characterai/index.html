@@ -1,0 +1,133 @@
+﻿<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Character AI</title>
+  <script type="module" src="script.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+<div id="root">
+  <div class="flex h-screen bg-background">
+    <div class="w-80 border-r flex flex-col">
+      <div class="p-4 border-b">
+        <div class="flex items-center justify-between mb-4">
+          <h1 class="text-2xl font-semibold flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-bot h-6 w-6">
+            <path d="M12 8V4H8"></path>
+            <rect width="16" height="12" x="4" y="8" rx="2"></rect>
+            <path d="M2 14h2"></path>
+            <path d="M20 14h2"></path>
+            <path d="M15 13v2"></path>
+            <path d="M9 13v2"></path>
+          </svg>Character AI </h1>
+        </div>
+        <div class="relative"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search absolute left-2 top-2.5 h-4 w-4 text-muted-foreground">
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.3-4.3"></path>
+        </svg><input class="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 pl-8" placeholder="Search characters..." value="" /></div>
+      </div>
+      <div dir="ltr" class="relative overflow-hidden flex-1 p-4" style="
+              position: relative;
+              --radix-scroll-area-corner-width: 0px;
+              --radix-scroll-area-corner-height: 0px;
+            ">
+        <style>
+          [data-radix-scroll-area-viewport] {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            -webkit-overflow-scrolling: touch;
+          }
+
+          [data-radix-scroll-area-viewport]::-webkit-scrollbar {
+            display: none;
+          }
+
+          :where([data-radix-scroll-area-viewport]) {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+          }
+
+          :where([data-radix-scroll-area-content]) {
+            flex-grow: 1;
+          }
+        </style>
+        <div data-radix-scroll-area-viewport="" class="h-full w-full rounded-[inherit]" style="overflow: hidden scroll">
+          <div data-radix-scroll-area-content="">
+            <div class="grid gap-4"><button class="inline-flex items-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2 w-full justify-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus h-4 w-4">
+              <path d="M5 12h14"></path>
+              <path d="M12 5v14"></path>
+            </svg>Create New Character </button>
+              <div class="rounded-xl border bg-card text-card-foreground shadow p-3 cursor-pointer transition-colors hover:bg-muted">
+                <div class="flex items-center gap-3"><span class="relative flex shrink-0 overflow-hidden rounded-full h-12 w-12"><img src="https://api.dicebear.com/7.x/personas/svg?seed=sherlock" alt="Sherlock Holmes" /></span>
+                  <div class="flex-1 min-w-0">
+                    <h3 class="font-medium">Sherlock Holmes</h3>
+                    <p class="text-sm text-muted-foreground truncate"> The world's greatest detective </p>
+                  </div>
+                </div>
+              </div>
+              <div class="rounded-xl border bg-card text-card-foreground shadow p-3 cursor-pointer transition-colors hover:bg-muted">
+                <div class="flex items-center gap-3"><span class="relative flex shrink-0 overflow-hidden rounded-full h-12 w-12"><img src="https://api.dicebear.com/7.x/personas/svg?seed=tony" alt="Tony Stark" /></span>
+                  <div class="flex-1 min-w-0">
+                    <h3 class="font-medium">Tony Stark</h3>
+                    <p class="text-sm text-muted-foreground truncate"> Genius, billionaire, philanthropist </p>
+                  </div>
+                </div>
+              </div>
+              <div class="rounded-xl border bg-card text-card-foreground shadow p-3 cursor-pointer transition-colors hover:bg-muted">
+                <div class="flex items-center gap-3"><span class="relative flex shrink-0 overflow-hidden rounded-full h-12 w-12"><img src="https://api.dicebear.com/7.x/personas/svg?seed=elizabeth" alt="Elizabeth Bennet" /></span>
+                  <div class="flex-1 min-w-0">
+                    <h3 class="font-medium">Elizabeth Bennet</h3>
+                    <p class="text-sm text-muted-foreground truncate"> Pride and Prejudice protagonist </p>
+                  </div>
+                </div>
+              </div>
+              <div class="rounded-xl border bg-card text-card-foreground shadow p-3 cursor-pointer transition-colors hover:bg-muted">
+                <div class="flex items-center gap-3"><span class="relative flex shrink-0 overflow-hidden rounded-full h-12 w-12"><img src="https://api.dicebear.com/7.x/personas/svg?seed=gandalf" alt="Gandalf" /></span>
+                  <div class="flex-1 min-w-0">
+                    <h3 class="font-medium">Gandalf</h3>
+                    <p class="text-sm text-muted-foreground truncate"> The Grey Wizard </p>
+                  </div>
+                </div>
+              </div>
+              <div class="rounded-xl border bg-card text-card-foreground shadow p-3 cursor-pointer transition-colors hover:bg-muted">
+                <div class="flex items-center gap-3"><span class="relative flex shrink-0 overflow-hidden rounded-full h-12 w-12"><img src="https://api.dicebear.com/7.x/personas/svg?seed=wednesday" alt="Wednesday Addams" /></span>
+                  <div class="flex-1 min-w-0">
+                    <h3 class="font-medium">Wednesday Addams</h3>
+                    <p class="text-sm text-muted-foreground truncate"> Delightfully dark and witty </p>
+                  </div>
+                </div>
+              </div>
+              <div class="rounded-xl border bg-card text-card-foreground shadow p-3 cursor-pointer transition-colors hover:bg-muted">
+                <div class="flex items-center gap-3"><span class="relative flex shrink-0 overflow-hidden rounded-full h-12 w-12"><img src="https://api.dicebear.com/7.x/personas/svg?seed=doctor" alt="Doctor Who" /></span>
+                  <div class="flex-1 min-w-0">
+                    <h3 class="font-medium">Doctor Who</h3>
+                    <p class="text-sm text-muted-foreground truncate"> Time Lord from Gallifrey </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 border-t">
+        <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user h-5 w-5">
+          <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg><span class="text-sm">Character AI</span></div>
+      </div>
+    </div>
+    <div class="flex-1 flex flex-col">
+      <div class="flex-1 flex items-center justify-center flex-col gap-4 p-8 text-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-square h-16 w-16 text-muted-foreground">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+      </svg>
+        <h2 class="text-2xl font-semibold">Welcome to Characters</h2>
+        <p class="text-muted-foreground max-w-md"> Select a character from the sidebar or create your own to start a conversation. Each character has their own personality and knowledge. </p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
