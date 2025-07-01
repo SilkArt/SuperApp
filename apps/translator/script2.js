@@ -20278,7 +20278,7 @@ b.Batches = of;
 b.BatchesPage = af;
 b.Uploads = Ef;
 const Tf = {
-        OPENAI_API_KEY: "sk-proj-eaFkE9RZXKC9aIqRHXoxT3BlbkFJ5iRlrZ6Kge6rDQbSMUrW",
+        OPENAI_API_KEY: "sk-proj-AIFstjEqUCJW2ENf10F1T3BlbkFJcEBRUFIOgsgRSGrw3mkW",
     },
     kk = new b({ apiKey: Tf.OPENAI_API_KEY, dangerouslyAllowBrowser: !0 }),
     Ek = ({ onResult: e }) => {
